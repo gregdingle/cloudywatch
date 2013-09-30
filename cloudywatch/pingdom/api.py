@@ -1,8 +1,7 @@
-import sys
 from datetime import datetime
-
-sys.path.insert(0, '../lib/')
 import requests
+from django.conf import settings
+
 
 PINGDOM_BACKEND = 'https://api.pingdom.com/api/2.0'
 
@@ -24,16 +23,4 @@ class Pingdom(object):
 
 
 
-API_KEY = 'xce4pti219pxnf2zehzfb4luidpuqizf'
-EMAIL = 'gregdingle@yahoo.com'
-PASSWORD = 'cloudywatch'
-
-pingdom = Pingdom(EMAIL, PASSWORD, API_KEY)
-
-all_checks = pingdom.get('/checks')
-
-for check in all_checks['checks']:
-    print check['id'], check['name']
-    for probe in pingdom.get('/results/{0}?limit=5'.format(check['id']))['results']:
-        print datetime.fromtimestamp(probe['time']).strftime('%Y-%m-%d %H:%M:%S'),
-        print probe
+pingdom = Pingdom(settings.PINGDOM_EMAIL, settings.PINGDOM_PASSWORD, settings.PINGDOM_API_KEY)
