@@ -2,13 +2,16 @@
 import sys
 import os
 
+
 def rel(*x):
     return os.path.join(os.path.abspath(os.path.dirname(__file__)), *x)
 
-sys.path.insert(0, rel('..','lib'))
+sys.path.insert(0, rel('..', 'lib'))
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+THUMBNAIL_DEBUG = True
 
 ADMINS = (
     ('Error', 'error@code-on.be'),
@@ -30,7 +33,7 @@ LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
 USE_I18N = False
-USE_L10N = True
+USE_L10N = False
 
 MEDIA_ROOT = rel('..', 'files', 'media')
 MEDIA_URL = '/media/'
@@ -60,14 +63,16 @@ TEMPLATE_LOADERS = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth', 
-    'django.core.context_processors.debug', 
-    'django.core.context_processors.i18n', 
-    'django.core.context_processors.media', 
-    'django.core.context_processors.static', 
-    'django.core.context_processors.request', 
-    'django.core.context_processors.tz', 
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.request',
+    'django.core.context_processors.tz',
     'django.contrib.messages.context_processors.messages',
+
+    'apps.context_processors.categories',
 )
 
 TEMPLATE_DIRS = (
@@ -83,13 +88,14 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    #'sorl.thumbnail',
+    'ckeditor',
+    'sorl.thumbnail',
     'staging',
     
     'apps',
     'pingdom',
+    'utils',
 )
-
 
 FIXTURE_DIRS = (
     rel('fixtures'),
@@ -98,6 +104,49 @@ FIXTURE_DIRS = (
 PINGDOM_API_KEY = 'xce4pti219pxnf2zehzfb4luidpuqizf'
 PINGDOM_EMAIL = 'gregdingle@yahoo.com'
 PINGDOM_PASSWORD = 'cloudywatch'
+
+CKEDITOR_UPLOAD_PATH = rel(MEDIA_ROOT, 'ckeditor')
+
+if not os.path.exists(CKEDITOR_UPLOAD_PATH):
+    os.makedirs(CKEDITOR_UPLOAD_PATH)
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Basic',
+        'forcePasteAsPlainText': True,
+        'removePlugins': 'maxheight'
+    },
+    'default_small': {
+        'toolbar': 'Basic',
+        'forcePasteAsPlainText': True,
+        'width': 600,
+        'height': 200,
+        'removePlugins': 'maxheight'
+    },
+    'flatpage': {
+        'toolbar': [
+            ['Format', 'Bold', 'Italic', 'Underline', 'Strike', 'Styles'],
+            ['SpecialChar', 'Image', 'Link'],
+            ['Undo', 'Redo'],
+            ['Source'],
+        ],
+        'format_tags': 'p;h1;h5;h6',
+        'stylesSet': [
+            {
+                'name': 'Red Color',
+                'element': 'span',
+                'attributes': {
+                    'class': 'red-color',
+                }
+            },
+        ],
+        'removePlugins': 'maxheight,stylesheetparser',
+        'forcePasteAsPlainText': True,
+        'contentsCss': [STATIC_URL + 'css/ckeditor.css'],
+        'width': 720,
+        'height': 500,
+    },
+}
 
 try:
     from settings_local import *

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="app-detail">
+
+  <div class="row">
+    <div class="col-md-2">
+        <a href="{{ application.url }}">
+          {% include 'apps/_logo_thumb.html' with logo=application.logo %}
+        </a>
+    </div>
+    <div class="col-md-10">
+      <h1><a class="hidden-link" href="{{ application.url }}">{{ application.title }}</a></h1>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="row">
+    <div class="col-md-12">
+        {{ application.description|safe }}
+    </div>
+  </div>
+
+</div>
+{% endblock %}

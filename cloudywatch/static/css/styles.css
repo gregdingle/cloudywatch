@@ -1,0 +1,24 @@
+.apps-overview .item {
+    display: block;
+    text-align: center;
+    border: 1px solid #eee;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.app-detail h1 {
+    margin: 0;
+    line-height: 100px;
+    font-weight: bold;
+}
+
+.hidden-link,
+.hidden-link:hover,
+.no-decoration:hover {
+    text-decoration: none;
+}
+
+.hidden-link, .hidden-link:hover {
+   color: inherit;
+}

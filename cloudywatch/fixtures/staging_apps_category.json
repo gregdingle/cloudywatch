@@ -3,7 +3,40 @@
   "pk": 1, 
   "model": "apps.category", 
   "fields": {
-    "title": "Productivity"
+    "slug": "help-desk", 
+    "title": "Help Desk"
+  }
+},
+{
+  "pk": 2, 
+  "model": "apps.category", 
+  "fields": {
+    "slug": "payment-processing", 
+    "title": "Payment Processing"
+  }
+},
+{
+  "pk": 3, 
+  "model": "apps.category", 
+  "fields": {
+    "slug": "project-management", 
+    "title": "Project Management"
+  }
+},
+{
+  "pk": 4, 
+  "model": "apps.category", 
+  "fields": {
+    "slug": "cloud-storage", 
+    "title": "Cloud Storage"
+  }
+},
+{
+  "pk": 5, 
+  "model": "apps.category", 
+  "fields": {
+    "slug": "ecommerce", 
+    "title": "eCommerce"
   }
 }
 ]

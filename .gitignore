@@ -21,6 +21,7 @@ lib64
 pip-log.txt
 
 # Unit test / coverage reports
+coverege
 .coverage
 .tox
 nosetests.xml
@@ -33,7 +34,16 @@ nosetests.xml
 .project
 .pydevproject
 
+# Virtual envs
+env
+venv
+.venv
+
 # project related
 files/*
-cloudywatch/django
+!files/media/
+files/media/*
+!files/media/staging/
+!files/media/ckeditor/
 
+cloudywatch/django

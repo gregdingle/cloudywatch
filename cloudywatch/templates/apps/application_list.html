@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="apps-list">
+{% for app in applications %}
+  <div class="row">
+    <div class="col-md-2">
+        <a href="{{ app.get_absolute_url }}">
+          {% include 'apps/_logo_thumb.html' with logo=app.logo %}
+        </a>
+    </div>
+    <div class="col-md-10">
+        <h4><a class="hidden-link" href="{{ app.get_absolute_url }}">{{ app.title }}</a></h4>
+        {{ app.description|truncatewords_html:30|safe }}
+        <a class="pull-right no-decoration" href="{{ app.get_absolute_url }}"><small>Learn More&nbsp;→</small></a>
+    </div>
+  </div>
+  <hr />
+{% endfor %}
+</div>
+{% endblock %}
