@@ -8,7 +8,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ApplicationAdmin(admin.ModelAdmin):
-    list_display = ['title', 'category', 'pingdom_id']
+    list_display = ['title', 'category', 'pingdom_id', 'downtime']
+    readonly_fields = ['downtime']
     prepopulated_fields = {'slug': ('title',)}
 
 

@@ -7,7 +7,8 @@
     "description": "<p>Web-based help desk software with an elegant support ticket system and a self-service customer support platform. Agile, smart and convenient.</p>\r\n", 
     "title": "Zendesk", 
     "url": "http://www.zendesk.com/", 
-    "pingdom_id": 1, 
+    "pingdom_id": 991748, 
+    "downtime": null, 
     "logo": "staging/apps/application/zendesk-logo.png", 
     "slug": "zendesk"
   }
@@ -20,7 +21,8 @@
     "description": "<p><span style=\"line-height: 1.6em;\">Help Scout is the easiest way for teams to share an email inbox, especially to deliver great customer service!</span></p>\r\n", 
     "title": "Help Scout", 
     "url": "http://www.helpscout.net/", 
-    "pingdom_id": 2, 
+    "pingdom_id": 991757, 
+    "downtime": null, 
     "logo": "staging/apps/application/hepl-scout-logo.png", 
     "slug": "help-scout"
   }
@@ -33,7 +35,8 @@
     "description": "<p>Casengo&rsquo;s cloud application for customer support blends the best of email and chat. It empowers webshops and other small businesses to more readily deliver the right answer at once. Passionately founded in 2011, devised and developed in Amsterdam. More happy customers!</p>\r\n", 
     "title": "Casengo", 
     "url": "http://www.casengo.com/", 
-    "pingdom_id": 3, 
+    "pingdom_id": 991766, 
+    "downtime": null, 
     "logo": "staging/apps/application/casengo-logo.png", 
     "slug": "casengo"
   }
@@ -45,8 +48,9 @@
     "category": 1, 
     "description": "<p>Freshdesk is an online, multi-channel customer support tool that includes helpdesk ticketing, a knowledgebase and a self-service portal. It helps companies support their customers over Email, phone, chat, forums, contact forms and also over social channels such as Facebook and Twitter.</p>\r\n", 
     "title": "Freshdesk", 
-    "url": "http://www.desk.com/", 
-    "pingdom_id": 4, 
+    "url": "http://freshdesk.com/", 
+    "pingdom_id": 991767, 
+    "downtime": null, 
     "logo": "staging/apps/application/freshdesk-logo.png", 
     "slug": "freshdesk"
   }
@@ -60,6 +64,7 @@
     "title": "PayPal", 
     "url": "http://www.paypal.com/", 
     "pingdom_id": 5, 
+    "downtime": null, 
     "logo": "staging/apps/application/paypal-logo.png", 
     "slug": "paypal"
   }
@@ -73,6 +78,7 @@
     "title": "Google Checkout", 
     "url": "https://checkout.google.com/", 
     "pingdom_id": 6, 
+    "downtime": null, 
     "logo": "staging/apps/application/google-checkout-logo.png", 
     "slug": "google-checkout"
   }
@@ -86,6 +92,7 @@
     "title": "Braintree", 
     "url": "http://www.braintreepayments.com/", 
     "pingdom_id": 7, 
+    "downtime": null, 
     "logo": "staging/apps/application/braintree-logo.png", 
     "slug": "braintree"
   }
@@ -99,6 +106,7 @@
     "title": "Authorize.net", 
     "url": "http://www.authorize.net/", 
     "pingdom_id": 8, 
+    "downtime": null, 
     "logo": "staging/apps/application/authorize-net-logo.png", 
     "slug": "authorizenet"
   }
@@ -112,6 +120,7 @@
     "title": "JIRA", 
     "url": "https://www.atlassian.com/software/jira", 
     "pingdom_id": 9, 
+    "downtime": null, 
     "logo": "staging/apps/application/jira-logo.png", 
     "slug": "jira"
   }
@@ -125,6 +134,7 @@
     "title": "Trello", 
     "url": "https://trello.com/", 
     "pingdom_id": 10, 
+    "downtime": null, 
     "logo": "staging/apps/application/trello-logo.png", 
     "slug": "trello"
   }
@@ -138,6 +148,7 @@
     "title": "Pivotal Tracker", 
     "url": "http://www.pivotaltracker.com/", 
     "pingdom_id": 11, 
+    "downtime": null, 
     "logo": "staging/apps/application/pivotal-tracker-logo.png", 
     "slug": "pivotal-tracker"
   }
@@ -151,6 +162,7 @@
     "title": "Project Bubble", 
     "url": "http://projectbubble.com/", 
     "pingdom_id": 12, 
+    "downtime": null, 
     "logo": "staging/apps/application/project-bubble-logo.png", 
     "slug": "project-bubble"
   }
@@ -163,7 +175,8 @@
     "description": "<p>Creates a single folder on your PC/Mac/Linux device that is instantaneously backed up and synchronized between your devices. Shares subfolders with groups. Free up to 2gb.</p>\r\n", 
     "title": "Dropbox", 
     "url": "https://www.dropbox.com/", 
-    "pingdom_id": 13, 
+    "pingdom_id": 953981, 
+    "downtime": null, 
     "logo": "staging/apps/application/dropbox-logo.png", 
     "slug": "dropbox"
   }
@@ -177,6 +190,7 @@
     "title": "Google Drive", 
     "url": "https://drive.google.com/", 
     "pingdom_id": 14, 
+    "downtime": null, 
     "logo": "staging/apps/application/google-drive-logo.png", 
     "slug": "google-drive"
   }
@@ -190,6 +204,7 @@
     "title": "SkyDrive", 
     "url": "https://skydrive.live.com/", 
     "pingdom_id": 15, 
+    "downtime": null, 
     "logo": "staging/apps/application/skydrive-logo.png", 
     "slug": "skydrive"
   }
@@ -203,6 +218,7 @@
     "title": "SugarSync", 
     "url": "https://www.sugarsync.com/", 
     "pingdom_id": 16, 
+    "downtime": null, 
     "logo": "staging/apps/application/sugarsync-logo.png", 
     "slug": "sugarsync"
   }
@@ -216,6 +232,7 @@
     "title": "Kickstarter", 
     "url": "http://www.kickstarter.com/", 
     "pingdom_id": 17, 
+    "downtime": null, 
     "logo": "staging/apps/application/kickstarter-logo.png", 
     "slug": "kickstarter"
   }
@@ -229,6 +246,7 @@
     "title": "Shopify", 
     "url": "http://www.shopify.com/", 
     "pingdom_id": 18, 
+    "downtime": null, 
     "logo": "staging/apps/application/shopify-logo.png", 
     "slug": "shopify"
   }
@@ -242,6 +260,7 @@
     "title": "Magento", 
     "url": "http://www.magentocommerce.com/", 
     "pingdom_id": 19, 
+    "downtime": null, 
     "logo": "staging/apps/application/magento-logo.png", 
     "slug": "magento"
   }
@@ -255,6 +274,7 @@
     "title": "Envato", 
     "url": "http://www.envato.com/", 
     "pingdom_id": 20, 
+    "downtime": null, 
     "logo": "staging/apps/application/envato-logo.png", 
     "slug": "envato"
   }

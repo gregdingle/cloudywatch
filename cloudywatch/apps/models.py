@@ -27,10 +27,15 @@ class Application(models.Model):
     description = RichTextField()
     url = models.URLField()
     pingdom_id = models.PositiveIntegerField(unique=True)
-    
+    # Downtime over the past 30 days
+    downtime = models.PositiveIntegerField(null=True, editable=False)
+
     def __unicode__(self):
         return self.title
 
     @models.permalink
     def get_absolute_url(self):
         return ('application_detail', [self.category.slug, self.slug])
+
+    def get_downtime_minutes(self):
+        return (self.downtime or 0) / 60
