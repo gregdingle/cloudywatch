@@ -48,3 +48,4 @@ files/media/*
 !files/media/ckeditor/
 
 cloudywatch/django
+*.sqlite*
