@@ -1,282 +1,282 @@
 [
 {
-  "pk": 1, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 1, 
-    "description": "<p>Web-based help desk software with an elegant support ticket system and a self-service customer support platform. Agile, smart and convenient.</p>\r\n", 
-    "title": "Zendesk", 
-    "url": "http://www.zendesk.com/", 
-    "pingdom_id": 991748, 
-    "downtime": null, 
-    "logo": "staging/apps/application/zendesk-logo.png", 
-    "slug": "zendesk"
-  }
+ "pk": 1, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 1, 
+  "description": "<p>Web-based help desk software with an elegant support ticket system and a self-service customer support platform. Agile, smart and convenient.</p>\r\n", 
+  "title": "Zendesk", 
+  "url": "http://www.zendesk.com/", 
+  "pingdom_id": 991748, 
+  "downtime": 0, 
+  "logo": "staging/apps/application/zendesk-logo.png", 
+  "slug": "zendesk"
+ }
 },
 {
-  "pk": 2, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 1, 
-    "description": "<p><span style=\"line-height: 1.6em;\">Help Scout is the easiest way for teams to share an email inbox, especially to deliver great customer service!</span></p>\r\n", 
-    "title": "Help Scout", 
-    "url": "http://www.helpscout.net/", 
-    "pingdom_id": 991757, 
-    "downtime": null, 
-    "logo": "staging/apps/application/hepl-scout-logo.png", 
-    "slug": "help-scout"
-  }
+ "pk": 2, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 1, 
+  "description": "<p><span style=\"line-height: 1.6em;\">Help Scout is the easiest way for teams to share an email inbox, especially to deliver great customer service!</span></p>\r\n", 
+  "title": "Help Scout", 
+  "url": "http://www.helpscout.net/", 
+  "pingdom_id": 991757, 
+  "downtime": 0, 
+  "logo": "staging/apps/application/hepl-scout-logo.png", 
+  "slug": "help-scout"
+ }
 },
 {
-  "pk": 3, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 1, 
-    "description": "<p>Casengo&rsquo;s cloud application for customer support blends the best of email and chat. It empowers webshops and other small businesses to more readily deliver the right answer at once. Passionately founded in 2011, devised and developed in Amsterdam. More happy customers!</p>\r\n", 
-    "title": "Casengo", 
-    "url": "http://www.casengo.com/", 
-    "pingdom_id": 991766, 
-    "downtime": null, 
-    "logo": "staging/apps/application/casengo-logo.png", 
-    "slug": "casengo"
-  }
+ "pk": 3, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 1, 
+  "description": "<p>Casengo&rsquo;s cloud application for customer support blends the best of email and chat. It empowers webshops and other small businesses to more readily deliver the right answer at once. Passionately founded in 2011, devised and developed in Amsterdam. More happy customers!</p>\r\n", 
+  "title": "Casengo", 
+  "url": "http://www.casengo.com/", 
+  "pingdom_id": 991766, 
+  "downtime": 120, 
+  "logo": "staging/apps/application/casengo-logo.png", 
+  "slug": "casengo"
+ }
 },
 {
-  "pk": 4, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 1, 
-    "description": "<p>Freshdesk is an online, multi-channel customer support tool that includes helpdesk ticketing, a knowledgebase and a self-service portal. It helps companies support their customers over Email, phone, chat, forums, contact forms and also over social channels such as Facebook and Twitter.</p>\r\n", 
-    "title": "Freshdesk", 
-    "url": "http://freshdesk.com/", 
-    "pingdom_id": 991767, 
-    "downtime": null, 
-    "logo": "staging/apps/application/freshdesk-logo.png", 
-    "slug": "freshdesk"
-  }
+ "pk": 4, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 1, 
+  "description": "<p>Freshdesk is an online, multi-channel customer support tool that includes helpdesk ticketing, a knowledgebase and a self-service portal. It helps companies support their customers over Email, phone, chat, forums, contact forms and also over social channels such as Facebook and Twitter.</p>\r\n", 
+  "title": "Freshdesk", 
+  "url": "http://freshdesk.com/", 
+  "pingdom_id": 991767, 
+  "downtime": 0, 
+  "logo": "staging/apps/application/freshdesk-logo.png", 
+  "slug": "freshdesk"
+ }
 },
 {
-  "pk": 5, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 2, 
-    "description": "<p>With PayPal, you can safely and easily send money to anyone with an email address, pay online for the things you want, and receive money for the items you sell.</p>\r\n", 
-    "title": "PayPal", 
-    "url": "http://www.paypal.com/", 
-    "pingdom_id": 5, 
-    "downtime": null, 
-    "logo": "staging/apps/application/paypal-logo.png", 
-    "slug": "paypal"
-  }
+ "pk": 5, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 2, 
+  "description": "<p>With PayPal, you can safely and easily send money to anyone with an email address, pay online for the things you want, and receive money for the items you sell.</p>\r\n", 
+  "title": "PayPal", 
+  "url": "http://www.paypal.com/", 
+  "pingdom_id": 998133, 
+  "downtime": 0, 
+  "logo": "staging/apps/application/paypal-logo.png", 
+  "slug": "paypal"
+ }
 },
 {
-  "pk": 6, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 2, 
-    "description": "<p>Find it with Google. Buy it with Google Checkout. Want a faster, safer, and more convenient way to shop from your mobile? You got it.</p>\r\n", 
-    "title": "Google Checkout", 
-    "url": "https://checkout.google.com/", 
-    "pingdom_id": 6, 
-    "downtime": null, 
-    "logo": "staging/apps/application/google-checkout-logo.png", 
-    "slug": "google-checkout"
-  }
+ "pk": 6, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 2, 
+  "description": "<p>Find it with Google. Buy it with Google Checkout. Want a faster, safer, and more convenient way to shop from your mobile? You got it.</p>\r\n", 
+  "title": "Google Checkout", 
+  "url": "https://checkout.google.com/", 
+  "pingdom_id": 6, 
+  "downtime": null, 
+  "logo": "staging/apps/application/google-checkout-logo.png", 
+  "slug": "google-checkout"
+ }
 },
 {
-  "pk": 7, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 2, 
-    "description": "<p>Braintree allows you to accept payments online. We offer a robust payment gateway, merchant account, secure credit card storage, subscription billing and simplified PCI.</p>\r\n", 
-    "title": "Braintree", 
-    "url": "http://www.braintreepayments.com/", 
-    "pingdom_id": 7, 
-    "downtime": null, 
-    "logo": "staging/apps/application/braintree-logo.png", 
-    "slug": "braintree"
-  }
+ "pk": 7, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 2, 
+  "description": "<p>Braintree allows you to accept payments online. We offer a robust payment gateway, merchant account, secure credit card storage, subscription billing and simplified PCI.</p>\r\n", 
+  "title": "Braintree", 
+  "url": "http://www.braintreepayments.com/", 
+  "pingdom_id": 998147, 
+  "downtime": 0, 
+  "logo": "staging/apps/application/braintree-logo.png", 
+  "slug": "braintree"
+ }
 },
 {
-  "pk": 8, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 2, 
-    "description": "<p>Payment gateway enables internet merchants to accept online payments via credit card and e-check.</p>\r\n", 
-    "title": "Authorize.net", 
-    "url": "http://www.authorize.net/", 
-    "pingdom_id": 8, 
-    "downtime": null, 
-    "logo": "staging/apps/application/authorize-net-logo.png", 
-    "slug": "authorizenet"
-  }
+ "pk": 8, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 2, 
+  "description": "<p>Payment gateway enables internet merchants to accept online payments via credit card and e-check.</p>\r\n", 
+  "title": "Authorize.net", 
+  "url": "http://www.authorize.net/", 
+  "pingdom_id": 998152, 
+  "downtime": 0, 
+  "logo": "staging/apps/application/authorize-net-logo.png", 
+  "slug": "authorizenet"
+ }
 },
 {
-  "pk": 9, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 3, 
-    "description": "<p>IRA is the leading issue tracking, bug tracking and project tracking tool for software development teams.</p>\r\n", 
-    "title": "JIRA", 
-    "url": "https://www.atlassian.com/software/jira", 
-    "pingdom_id": 9, 
-    "downtime": null, 
-    "logo": "staging/apps/application/jira-logo.png", 
-    "slug": "jira"
-  }
+ "pk": 9, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 3, 
+  "description": "<p>IRA is the leading issue tracking, bug tracking and project tracking tool for software development teams.</p>\r\n", 
+  "title": "JIRA", 
+  "url": "https://www.atlassian.com/software/jira", 
+  "pingdom_id": 998155, 
+  "downtime": 0, 
+  "logo": "staging/apps/application/jira-logo.png", 
+  "slug": "jira"
+ }
 },
 {
-  "pk": 10, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 3, 
-    "description": "<p>Trello is a task management system that organizes projects around boards. In one glance, you can see what&#39;s being worked on, who&#39;s working on what, and where something is in a process. Read Trello reviews below.</p>\r\n", 
-    "title": "Trello", 
-    "url": "https://trello.com/", 
-    "pingdom_id": 10, 
-    "downtime": null, 
-    "logo": "staging/apps/application/trello-logo.png", 
-    "slug": "trello"
-  }
+ "pk": 10, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 3, 
+  "description": "<p>Trello is a task management system that organizes projects around boards. In one glance, you can see what&#39;s being worked on, who&#39;s working on what, and where something is in a process. Read Trello reviews below.</p>\r\n", 
+  "title": "Trello", 
+  "url": "https://trello.com/", 
+  "pingdom_id": 998156, 
+  "downtime": 0, 
+  "logo": "staging/apps/application/trello-logo.png", 
+  "slug": "trello"
+ }
 },
 {
-  "pk": 11, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 3, 
-    "description": "<p>Pivotal Tracker is an easy to use, agile project management tool that brings focused collaboration to software development teams. Built by Pivotal Labs, it embodies proven agile methods, based on experience from hundreds of successful large scale projects.</p>\r\n", 
-    "title": "Pivotal Tracker", 
-    "url": "http://www.pivotaltracker.com/", 
-    "pingdom_id": 11, 
-    "downtime": null, 
-    "logo": "staging/apps/application/pivotal-tracker-logo.png", 
-    "slug": "pivotal-tracker"
-  }
+ "pk": 11, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 3, 
+  "description": "<p>Pivotal Tracker is an easy to use, agile project management tool that brings focused collaboration to software development teams. Built by Pivotal Labs, it embodies proven agile methods, based on experience from hundreds of successful large scale projects.</p>\r\n", 
+  "title": "Pivotal Tracker", 
+  "url": "http://www.pivotaltracker.com/", 
+  "pingdom_id": 998157, 
+  "downtime": 0, 
+  "logo": "staging/apps/application/pivotal-tracker-logo.png", 
+  "slug": "pivotal-tracker"
+ }
 },
 {
-  "pk": 12, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 3, 
-    "description": "<p>Project Bubble is an online project management and invoicing tool that is easy-to-use and includes time-tracking, collaboration, reporting and more. Try it for free!</p>\r\n", 
-    "title": "Project Bubble", 
-    "url": "http://projectbubble.com/", 
-    "pingdom_id": 12, 
-    "downtime": null, 
-    "logo": "staging/apps/application/project-bubble-logo.png", 
-    "slug": "project-bubble"
-  }
+ "pk": 12, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 3, 
+  "description": "<p>Project Bubble is an online project management and invoicing tool that is easy-to-use and includes time-tracking, collaboration, reporting and more. Try it for free!</p>\r\n", 
+  "title": "Project Bubble", 
+  "url": "http://projectbubble.com/", 
+  "pingdom_id": 998159, 
+  "downtime": 0, 
+  "logo": "staging/apps/application/project-bubble-logo.png", 
+  "slug": "project-bubble"
+ }
 },
 {
-  "pk": 13, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 4, 
-    "description": "<p>Creates a single folder on your PC/Mac/Linux device that is instantaneously backed up and synchronized between your devices. Shares subfolders with groups. Free up to 2gb.</p>\r\n", 
-    "title": "Dropbox", 
-    "url": "https://www.dropbox.com/", 
-    "pingdom_id": 953981, 
-    "downtime": null, 
-    "logo": "staging/apps/application/dropbox-logo.png", 
-    "slug": "dropbox"
-  }
+ "pk": 13, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 4, 
+  "description": "<p>Creates a single folder on your PC/Mac/Linux device that is instantaneously backed up and synchronized between your devices. Shares subfolders with groups. Free up to 2gb.</p>\r\n", 
+  "title": "Dropbox", 
+  "url": "https://www.dropbox.com/", 
+  "pingdom_id": 953981, 
+  "downtime": 959, 
+  "logo": "staging/apps/application/dropbox-logo.png", 
+  "slug": "dropbox"
+ }
 },
 {
-  "pk": 14, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 4, 
-    "description": "<p>Google Drive is everywhere you are&mdash;on the web, in your home, at the office and on the go. So wherever you are, your stuff is just...there. Ready to go, ready to share. Get started with 5 GB free.</p>\r\n", 
-    "title": "Google Drive", 
-    "url": "https://drive.google.com/", 
-    "pingdom_id": 14, 
-    "downtime": null, 
-    "logo": "staging/apps/application/google-drive-logo.png", 
-    "slug": "google-drive"
-  }
+ "pk": 14, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 4, 
+  "description": "<p>Google Drive is everywhere you are&mdash;on the web, in your home, at the office and on the go. So wherever you are, your stuff is just...there. Ready to go, ready to share. Get started with 5 GB free.</p>\r\n", 
+  "title": "Google Drive", 
+  "url": "https://drive.google.com/", 
+  "pingdom_id": 14, 
+  "downtime": null, 
+  "logo": "staging/apps/application/google-drive-logo.png", 
+  "slug": "google-drive"
+ }
 },
 {
-  "pk": 15, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 4, 
-    "description": "<p>Windows Live SkyDrive is a cloud-based storage service from Microsoft.</p>\r\n", 
-    "title": "SkyDrive", 
-    "url": "https://skydrive.live.com/", 
-    "pingdom_id": 15, 
-    "downtime": null, 
-    "logo": "staging/apps/application/skydrive-logo.png", 
-    "slug": "skydrive"
-  }
+ "pk": 15, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 4, 
+  "description": "<p>Windows Live SkyDrive is a cloud-based storage service from Microsoft.</p>\r\n", 
+  "title": "SkyDrive", 
+  "url": "https://skydrive.live.com/", 
+  "pingdom_id": 15, 
+  "downtime": null, 
+  "logo": "staging/apps/application/skydrive-logo.png", 
+  "slug": "skydrive"
+ }
 },
 {
-  "pk": 16, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 4, 
-    "description": "<p>SugarSync&#39;s online backup, file sync and sharing service makes it easy to stay connected. Get secure cloud storage for all your files.</p>\r\n", 
-    "title": "SugarSync", 
-    "url": "https://www.sugarsync.com/", 
-    "pingdom_id": 16, 
-    "downtime": null, 
-    "logo": "staging/apps/application/sugarsync-logo.png", 
-    "slug": "sugarsync"
-  }
+ "pk": 16, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 4, 
+  "description": "<p>SugarSync&#39;s online backup, file sync and sharing service makes it easy to stay connected. Get secure cloud storage for all your files.</p>\r\n", 
+  "title": "SugarSync", 
+  "url": "https://www.sugarsync.com/", 
+  "pingdom_id": 998165, 
+  "downtime": 0, 
+  "logo": "staging/apps/application/sugarsync-logo.png", 
+  "slug": "sugarsync"
+ }
 },
 {
-  "pk": 17, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 5, 
-    "description": "<p>Kickstarter gives creative entrepreneurs a chance to fund their ideas.</p>\r\n", 
-    "title": "Kickstarter", 
-    "url": "http://www.kickstarter.com/", 
-    "pingdom_id": 17, 
-    "downtime": null, 
-    "logo": "staging/apps/application/kickstarter-logo.png", 
-    "slug": "kickstarter"
-  }
+ "pk": 17, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 5, 
+  "description": "<p>Kickstarter gives creative entrepreneurs a chance to fund their ideas.</p>\r\n", 
+  "title": "Kickstarter", 
+  "url": "http://www.kickstarter.com/", 
+  "pingdom_id": 998166, 
+  "downtime": 0, 
+  "logo": "staging/apps/application/kickstarter-logo.png", 
+  "slug": "kickstarter"
+ }
 },
 {
-  "pk": 18, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 5, 
-    "description": "<p>Hosted e-commerce with Shopify, the easy way to start your own online store. Shopify gives you your own storefront to sell your products on.</p>\r\n", 
-    "title": "Shopify", 
-    "url": "http://www.shopify.com/", 
-    "pingdom_id": 18, 
-    "downtime": null, 
-    "logo": "staging/apps/application/shopify-logo.png", 
-    "slug": "shopify"
-  }
+ "pk": 18, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 5, 
+  "description": "<p>Hosted e-commerce with Shopify, the easy way to start your own online store. Shopify gives you your own storefront to sell your products on.</p>\r\n", 
+  "title": "Shopify", 
+  "url": "http://www.shopify.com/", 
+  "pingdom_id": 998167, 
+  "downtime": 0, 
+  "logo": "staging/apps/application/shopify-logo.png", 
+  "slug": "shopify"
+ }
 },
 {
-  "pk": 19, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 5, 
-    "description": "<p>Magento is a feature-rich eCommerce platform built on open-source technology that provides online merchants with unprecedented flexibility and control over the look, content and functionality of their eCommerce store.</p>\r\n", 
-    "title": "Magento", 
-    "url": "http://www.magentocommerce.com/", 
-    "pingdom_id": 19, 
-    "downtime": null, 
-    "logo": "staging/apps/application/magento-logo.png", 
-    "slug": "magento"
-  }
+ "pk": 19, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 5, 
+  "description": "<p>Magento is a feature-rich eCommerce platform built on open-source technology that provides online merchants with unprecedented flexibility and control over the look, content and functionality of their eCommerce store.</p>\r\n", 
+  "title": "Magento", 
+  "url": "http://www.magentocommerce.com/", 
+  "pingdom_id": 998169, 
+  "downtime": 0, 
+  "logo": "staging/apps/application/magento-logo.png", 
+  "slug": "magento"
+ }
 },
 {
-  "pk": 20, 
-  "model": "apps.application", 
-  "fields": {
-    "category": 5, 
-    "description": "<p>The Envato Marketplaces allow anyone to buy or sell digital goods like WordPress themes, background music, After Effects project files, Flash templates and much more. The marketplaces are home to a thriving community of over 500,000 users, authors and buyers and every day hundreds of new files are added.</p>\r\n", 
-    "title": "Envato", 
-    "url": "http://www.envato.com/", 
-    "pingdom_id": 20, 
-    "downtime": null, 
-    "logo": "staging/apps/application/envato-logo.png", 
-    "slug": "envato"
-  }
+ "pk": 20, 
+ "model": "apps.application", 
+ "fields": {
+  "category": 5, 
+  "description": "<p>The Envato Marketplaces allow anyone to buy or sell digital goods like WordPress themes, background music, After Effects project files, Flash templates and much more. The marketplaces are home to a thriving community of over 500,000 users, authors and buyers and every day hundreds of new files are added.</p>\r\n", 
+  "title": "Envato", 
+  "url": "http://www.envato.com/", 
+  "pingdom_id": 998170, 
+  "downtime": 0, 
+  "logo": "staging/apps/application/envato-logo.png", 
+  "slug": "envato"
+ }
 }
 ]
