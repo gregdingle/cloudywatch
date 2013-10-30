@@ -15,8 +15,12 @@ class Pingdom(object):
 
     def get(self, path):
         headers = {'App-Key': self.api_key}
-        resp = requests.get(PINGDOM_BACKEND + path,
-                            auth=(self.email, self.password), headers=headers)
+        try:
+            resp = requests.get(PINGDOM_BACKEND + path,
+                                auth=(self.email, self.password), headers=headers, timeout=10)
+        except requests.exceptions.Timeout:
+            raise PingdomError("Connection timeout")
+
         if resp.status_code != 200:
             raise PingdomError(resp.content)
         return resp.json()
