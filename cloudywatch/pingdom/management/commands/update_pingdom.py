@@ -54,5 +54,5 @@ class Command(BaseCommand):
                     )
                 )
 
-            print "{0} new probe(s) created".format(len(instances_to_create))
             Probe.objects.bulk_create(instances_to_create)
+            print "{0} new probe(s) created".format(len(instances_to_create))
