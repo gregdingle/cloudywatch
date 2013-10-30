@@ -17,9 +17,9 @@ class Pingdom(object):
         headers = {'App-Key': self.api_key}
         try:
             resp = requests.get(PINGDOM_BACKEND + path,
-                                auth=(self.email, self.password), headers=headers, timeout=10)
+                                auth=(self.email, self.password), headers=headers, timeout=30)
         except requests.exceptions.Timeout:
-            raise PingdomError("Connection timeout")
+            raise PingdomError("Connection timeout.")
 
         if resp.status_code != 200:
             raise PingdomError(resp.content)

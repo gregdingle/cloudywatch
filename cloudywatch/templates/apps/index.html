@@ -7,7 +7,7 @@
   <h3>{{ category.title }}</h3>
   <hr />
   <div class="row">
-    {% for app in category.application_set.all|slice:':4' %}
+    {% for app in category.application_set.enabled|slice:':4' %}
     <div class="col-md-3 col-sm-6 col-xs-12">
       <a class="item hidden-link" href="{{ app.get_absolute_url }}">
         {% include 'apps/_logo_thumb.html' with logo=app.logo %}

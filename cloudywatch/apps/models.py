@@ -19,6 +19,11 @@ class Category(models.Model):
         return ('application_list', [self.slug])
 
 
+class ApplicationManager(models.Manager):
+    def enabled(self):
+        return self.get_query_set().filter(enabled=True)
+
+
 class Application(models.Model):
     category = models.ForeignKey(Category)
     title = models.CharField(max_length=200)
@@ -31,6 +36,8 @@ class Application(models.Model):
     downtime = models.PositiveIntegerField(null=True, editable=False)
     enabled = models.BooleanField()
     notes = models.TextField(blank=True)
+
+    objects = ApplicationManager()
 
     def __unicode__(self):
         return self.title

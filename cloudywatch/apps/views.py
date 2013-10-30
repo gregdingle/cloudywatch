@@ -17,10 +17,10 @@ def index(request):
 def application_list(request, category_slug=None):
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
-        applications = category.application_set.all()
+        applications = category.application_set.enabled()
     else:
         category = None
-        applications = Application.objects.all()
+        applications = Application.objects.enabled()
 
     return {
         'category': category,
@@ -30,7 +30,7 @@ def application_list(request, category_slug=None):
 
 @render_to('apps/application_detail.html')
 def application_detail(request, category_slug, application_slug):
-    application = get_object_or_404(Application, category__slug=category_slug, slug=application_slug)
+    application = get_object_or_404(Application, category__slug=category_slug, slug=application_slug, enabled=True)
 
     # TODO: Move the logic to Application model
     datetime_from = datetime.now() - timedelta(days=7)
