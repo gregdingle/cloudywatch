@@ -29,6 +29,8 @@ class Application(models.Model):
     pingdom_id = models.PositiveIntegerField(unique=True)
     # Downtime over the past 30 days
     downtime = models.PositiveIntegerField(null=True, editable=False)
+    enabled = models.BooleanField()
+    notes = models.TextField(blank=True)
 
     def __unicode__(self):
         return self.title
