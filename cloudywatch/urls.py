@@ -8,7 +8,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^$', 'apps.views.index', name='index'),
     (r'^apps/', include('apps.urls')),
-    url(r'^admin/find-tool/$', 'apps.views.foo', name='foo'),
+    url(r'^admin/find-tool/$', 'apps.views.find_tool', name='find_tool'),
 
     (r'^admin/', include(admin.site.urls)),
    

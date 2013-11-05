@@ -62,11 +62,10 @@ def application_detail(request, category_slug, application_slug):
 
 
 @render_to('apps/find_tool.html')
-def foo(request):
+def find_tool(request):
     form = FindToolForm(request.GET or None)
     if form.is_valid():
         application = form.cleaned_data['application']
-
         app_names = []
         for keyword in ('vs', 'compared to'):
             q = '%s %s' % (application.title.lower(), keyword)
