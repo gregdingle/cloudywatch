@@ -1,10 +1,15 @@
 from datetime import datetime, timedelta
+import urllib
+import xml.etree.ElementTree as ET
+
+import requests
 
 from django.db.models import Avg
 from django.utils import simplejson as json
 from django.shortcuts import get_object_or_404
 
 from utils.views import render_to
+from .forms import FindToolForm
 from .models import Category, Application
 
 
@@ -54,3 +59,22 @@ def application_detail(request, category_slug, application_slug):
         'pingdom_probes': json.dumps(pingdom_probes),
         'point_size': 0 if len(pingdom_probes) > 30 else 5
     }
+
+
+@render_to('apps/find_tool.html')
+def foo(request):
+    form = FindToolForm(request.GET or None)
+    if form.is_valid():
+        application = form.cleaned_data['application']
+
+        app_names = []
+        for keyword in ('vs', 'compared to'):
+            q = '%s %s' % (application.title.lower(), keyword)
+            r = requests.get('http://suggestqueries.google.com/complete/search?output=toolbar&hl=en&%s'
+                             % urllib.quote_plus('q=%s' % q, safe='='))
+            tree = ET.fromstring(r.text)
+            suggestions = [item.get('data') for item in tree.findall('*suggestion')]
+            app_names += [s.rpartition(q)[2].strip() for s in suggestions if s != q]
+        return {'form': form, 'app_names': set(app_names), 'category': application.category}
+
+    return {'form': form}

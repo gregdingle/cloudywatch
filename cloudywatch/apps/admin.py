@@ -8,6 +8,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ApplicationAdmin(admin.ModelAdmin):
+    change_list_template = 'apps/admin_application_change_list.html'
     list_display = ['title', 'category', 'pingdom_id', 'downtime', 'enabled']
     list_editable = ['pingdom_id', 'enabled']
     readonly_fields = ['downtime']

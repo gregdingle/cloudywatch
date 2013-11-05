@@ -1,0 +1,59 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_static %}
+{% load admin_urls %}
+
+{% block title %}
+Find tool
+{{ block.super }}
+{% endblock %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'admin/css/forms.css' %}" />
+{% endblock %}
+
+{# {% block bodyclass %}{{ opts.app_label }}-{{ opts.object_name.lower }} change-form{% endblock %} #}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+&rsaquo; <a href="{% url 'admin:app_list' 'apps' %}">Apps</a>
+&rsaquo; <a href="{% url 'admin:apps_application_changelist' %}">Applications</a>
+&rsaquo; Find tool
+</div>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+    <form>{% block form_top %}{% endblock %}
+        <p>Lorem ipsum</p>
+        <fieldset class="module aligned">
+            <div class="form-row" style="overflow: visible;">
+                <div class="field-box">
+                    <label for="{{ form.application.id_for_label }}" class="required">{% trans 'Application' %}:</label>
+                    {{ form.application }}
+                </div>
+                <div class="field-box">
+                    <input type="submit" value="Search">
+                </div>
+
+                <div style="clear: both;"></div>
+            </div>
+        </fieldset>
+    </form>
+
+    {% if app_names %}
+    <table style="min-width: 308px;">
+        <tbody>
+        {% for app_name in app_names %}
+            <tr>
+                <td>{{ app_name }}</td>
+                <td style="width: 1px; white-space: nowrap"><a style="color: inherit;" class="button" href="{% url 'admin:apps_application_add' %}?category={{ category.pk }}&title={{ app_name|capfirst }}&slug={{ app_name|slugify }}" target="_blank">Create app</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+</div>
+{% endblock %}
