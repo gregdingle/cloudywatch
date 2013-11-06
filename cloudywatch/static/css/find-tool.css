@@ -1,0 +1,23 @@
+.find-tool table {
+    min-width: 308px;
+}
+.find-tool table td {
+    vertical-align: middle;
+}
+.find-tool table td.exists {
+    color: green;
+}
+.find-tool table caption {
+    text-align: left;
+    font-weight: bold;
+}
+.find-tool td.button-container {
+    width: 1px;
+    white-space: nowrap;
+}
+.find-tool td input {
+    margin: 0;
+}
+.find-tool td a input {
+    cursor: pointer;
+}

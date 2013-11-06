@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 
 import requests
 
+from django.contrib.admin.views.decorators import staff_member_required
 from django.db.models import Avg
 from django.utils import simplejson as json
 from django.shortcuts import get_object_or_404
@@ -61,19 +62,27 @@ def application_detail(request, category_slug, application_slug):
     }
 
 
+@staff_member_required
 @render_to('apps/find_tool.html')
 def find_tool(request):
     form = FindToolForm(request.GET or None)
     if form.is_valid():
         application = form.cleaned_data['application']
-        app_names = []
-        for keyword in ('vs', 'compared to'):
-            q = '%s %s' % (application.title.lower(), keyword)
+        results = {}
+        for word in ('vs', 'compared to', 'or'):
+            q = '%s %s' % (application.title.lower(), word)
             r = requests.get('http://suggestqueries.google.com/complete/search?output=toolbar&hl=en&%s'
                              % urllib.quote_plus('q=%s' % q, safe='='))
             tree = ET.fromstring(r.text)
             suggestions = [item.get('data') for item in tree.findall('*suggestion')]
-            app_names += [s.rpartition(q)[2].strip() for s in suggestions if s != q]
-        return {'form': form, 'app_names': set(app_names), 'category': application.category}
+            app_list = []
+            for s in suggestions:
+                if s != q:
+                    title = s.rpartition(q)[2].strip()
+                    exists = Application.objects.filter(title__iexact=title).exists()
+                    app_list.append((title, exists))
+            results[word] = app_list
+
+        return {'form': form, 'results': results, 'category': application.category}
 
     return {'form': form}

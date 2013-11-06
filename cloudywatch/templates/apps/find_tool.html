@@ -10,9 +10,10 @@ Find tool
 {% block extrastyle %}
 {{ block.super }}
 <link rel="stylesheet" type="text/css" href="{% static 'admin/css/forms.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/find-tool.css' %}" />
 {% endblock %}
 
-{# {% block bodyclass %}{{ opts.app_label }}-{{ opts.object_name.lower }} change-form{% endblock %} #}
+{% block bodyclass %}find-tool change-form{% endblock %}
 
 {% block breadcrumbs %}
 <div class="breadcrumbs">
@@ -26,7 +27,7 @@ Find tool
 {% block content %}
 <div id="content-main">
     <form>{% block form_top %}{% endblock %}
-        <p>Lorem ipsum</p>
+        <p>The results marked in green indicate that the application of the same name already exists in the database.</p>
         <fieldset class="module aligned">
             <div class="form-row" style="overflow: visible;">
                 <div class="field-box">
@@ -36,23 +37,37 @@ Find tool
                 <div class="field-box">
                     <input type="submit" value="Search">
                 </div>
-
-                <div style="clear: both;"></div>
+                <div class="clear"></div>
             </div>
         </fieldset>
     </form>
 
-    {% if app_names %}
-    <table style="min-width: 308px;">
+    {% if results %}
+    {% for word, app_list in results.items %}
+    <table>
+        <caption>{{ word }}</caption>
         <tbody>
-        {% for app_name in app_names %}
+        {% for name, exists in app_list %}
             <tr>
-                <td>{{ app_name }}</td>
-                <td style="width: 1px; white-space: nowrap"><a style="color: inherit;" class="button" href="{% url 'admin:apps_application_add' %}?category={{ category.pk }}&title={{ app_name|capfirst }}&slug={{ app_name|slugify }}" target="_blank">Create app</a></td>
+                <td class="{{ exists|yesno:'exists,' }}">{{ name }}</td>
+                <td class="button-container">
+                {% with button_title="Create app" %}
+                {% if not exists %}
+                    <a href="{% url 'admin:apps_application_add' %}?category={{ category.pk }}&title={{ name|capfirst }}&slug={{ name|slugify }}" target="_blank"><input type="button" value="{{ button_title }}" /></a></td>
+                {% else %}
+                    <input type="button" disabled="disabled" value="{{ button_title }}" />
+                {% endif %}
+                {% endwith %}
+                </td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td clospan="2">No results</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
+    {% endfor %}
     {% endif %}
 
 </div>
