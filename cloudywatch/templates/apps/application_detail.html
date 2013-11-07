@@ -27,14 +27,14 @@
 
   {% if comparisons %}
   <div class="comparisons">
-  <h4>Comparisons</h4>
-  <ul>
-  {% for item in comparisons %}
-    <li>
-        <a href="{{ item.get_absolute_url }}">{{ item.title }}</a>
-    </li>
-  {% endfor %}
-  </ul>
+    <h4>Comparisons</h4>
+    <ul>
+    {% for item in comparisons %}
+      <li>
+          <a href="{{ item.get_absolute_url }}">{{ item.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
   </div>
   {% endif %}
 

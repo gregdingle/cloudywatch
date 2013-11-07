@@ -43,7 +43,7 @@
             <li class="dropdown{% if 'comparisons' in request.path %} active{% endif %}">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Comparitions <b class="caret"></b></a>
               <ul class="dropdown-menu">
-              {% for item in comparisons %}
+              {% for item in all_comparisons %}
                 <li><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></li>
               {% endfor %}
               </ul>

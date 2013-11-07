@@ -3,5 +3,5 @@ from .models import Comparison
 
 def comparisons(request):
     return {
-        'comparisons': Comparison.objects.all()
+        'all_comparisons': Comparison.objects.all()
     }
