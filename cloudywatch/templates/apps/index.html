@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% load thumbnail %}
 
 {% block content %}
 <div class="apps-overview">
@@ -9,14 +8,14 @@
   <div class="row">
     {% for app in category.application_set.enabled|slice:':4' %}
     <div class="col-md-3 col-sm-6 col-xs-12">
-      <a class="item hidden-link" href="{{ app.get_absolute_url }}">
+      <a class="item unstyled-link" href="{{ app.get_absolute_url }}">
         {% include 'apps/_logo_thumb.html' with logo=app.logo %}
         <h4>{{ app.title }}</h4>
       </a>
     </div>
     {% endfor %}
   </div>
-  <a class="pull-right no-decoration" href="{{ category.get_absolute_url }}">View All</a>
+  <a class="pull-right more" href="{{ category.get_absolute_url }}">View All</a>
 {% endfor %}
 </div>
 {% endblock %}

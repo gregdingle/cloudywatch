@@ -13,12 +13,19 @@
     font-weight: bold;
 }
 
-.hidden-link,
-.hidden-link:hover,
-.no-decoration:hover {
+a.more:hover {
     text-decoration: none;
 }
 
-.hidden-link, .hidden-link:hover {
+.unstyled-link,
+.unstyled-link:hover {
    color: inherit;
+   text-decoration: none;
+}
+
+.comparisons {
+    margin-top: 40px;
+}
+.comparison-detail li span {
+    padding-left: 10px;
 }

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+
+{% block content %}
+<div class="comparison-detail">
+  <h3>{{ comparison.title }}</h3>
+  <hr />
+  <ul class="list-unstyled">
+  {% for app in comparison.applications.enabled %}
+    <li>
+        <a class="unstyled-link" href="{{ app.get_absolute_url }}">
+            {% thumbnail app.logo '50x50' crop="center" format='PNG' as im %}
+            <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="">
+            {% endthumbnail %}
+            <span>{{ app.title }}</span>
+        </a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
+{% endblock %}

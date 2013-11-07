@@ -1,5 +1,6 @@
 from django.contrib import admin
-from models import Category, Application
+
+from .models import Category, Application
 
 
 class CategoryAdmin(admin.ModelAdmin):

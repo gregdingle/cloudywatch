@@ -57,6 +57,7 @@ def application_detail(request, category_slug, application_slug):
 
     return {
         'application': application,
+        'comparisons': application.comparison_set.all(),
         'pingdom_probes': json.dumps(pingdom_probes),
         'point_size': 0 if len(pingdom_probes) > 30 else 5
     }

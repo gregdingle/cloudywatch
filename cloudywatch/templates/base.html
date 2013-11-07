@@ -40,20 +40,16 @@
           <ul class="nav navbar-nav">
             {% url 'index' as index_page_url %}
             <li{% if request.path == index_page_url %} class="active"{% endif %}><a href="{{ index_page_url }}">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <li class="dropdown{% if 'comparisons' in request.path %} active{% endif %}">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Comparitions <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+              {% for item in comparisons %}
+                <li><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></li>
+              {% endfor %}
               </ul>
             </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

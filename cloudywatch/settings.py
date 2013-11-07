@@ -73,6 +73,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
 
     'apps.context_processors.categories',
+    'comparisons.context_processors.comparisons',
 )
 
 TEMPLATE_DIRS = (
@@ -93,6 +94,7 @@ INSTALLED_APPS = (
     'staging',
     
     'apps',
+    'comparisons',
     'pingdom',
     'utils',
 )
