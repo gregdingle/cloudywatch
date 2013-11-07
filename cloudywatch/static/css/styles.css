@@ -26,6 +26,9 @@ a.more:hover {
 .comparisons {
     margin-top: 40px;
 }
+.comparison-detail li {
+    margin-bottom: 5px;
+}
 .comparison-detail li span {
     padding-left: 10px;
 }
