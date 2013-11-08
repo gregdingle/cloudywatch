@@ -40,14 +40,7 @@
           <ul class="nav navbar-nav">
             {% url 'index' as index_page_url %}
             <li{% if request.path == index_page_url %} class="active"{% endif %}><a href="{{ index_page_url }}">Home</a></li>
-            <li class="dropdown{% if 'comparisons' in request.path %} active{% endif %}">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Comparitions <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-              {% for item in all_comparisons %}
-                <li><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></li>
-              {% endfor %}
-              </ul>
-            </li>
+            <li{% if 'comparisons' in request.path %} class="active"{% endif %}><a href="{% url 'comparison_detail' %}">Comparisons</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -58,6 +51,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
+          {% block sidebar %}
           <ul class="nav nav-pills nav-stacked">
           {% for category in categories %}
           {% with category_url=category.get_absolute_url %}
@@ -67,6 +61,7 @@
             {% url 'application_list' as application_list_url %}
             <li{% if request.path == application_list_url %} class="active"{% endif %}><a href="{{ application_list_url }}"><span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;All Categories</a></li>
           </ul>
+          {% endblock %}
         </div>
         <div class="col-md-9">
             {% block content %}{% endblock %}

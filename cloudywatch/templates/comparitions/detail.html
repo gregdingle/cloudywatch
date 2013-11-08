@@ -1,10 +1,18 @@
 {% extends 'base.html' %}
 {% load thumbnail %}
 
+{% block sidebar %}
+<ul class="nav nav-pills nav-stacked">
+{% for item in comparisons %}
+  <li{% if item == comparison %} class="active"{% endif %}>
+    <a href="{{ item.get_absolute_url }}">{{ item.title }}</a>
+  </li>
+{% endfor %}
+</ul>
+{% endblock %}
+
 {% block content %}
 <div class="comparison-detail">
-  <h3>{{ comparison.title }}</h3>
-  <hr />
   <ul class="list-unstyled">
   {% for app in comparison.applications.enabled %}
     <li>
