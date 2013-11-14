@@ -1,11 +1,12 @@
 from django.contrib import admin
 
+from .forms import ComparisonForm
 from .models import Comparison
 
 
 class ComparisonAdmin(admin.ModelAdmin):
-    list_display = ['title']
-    prepopulated_fields = {'slug': ('title',)}
+    form = ComparisonForm
+    list_display = ['title', 'slug']
     filter_horizontal = ['applications']
 
 

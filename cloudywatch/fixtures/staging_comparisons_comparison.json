@@ -5,10 +5,10 @@
   "fields": {
     "applications": [
       1, 
-      3
+      2
     ], 
-    "slug": "comparison-1", 
-    "title": "Comparison 1"
+    "slug": "zendesk/vs/help-scout", 
+    "title": "Zendesk vs Help Scout"
   }
 },
 {
@@ -16,12 +16,11 @@
   "model": "comparisons.comparison", 
   "fields": {
     "applications": [
-      13, 
-      15, 
-      16
+      3, 
+      4
     ], 
-    "slug": "comparison-2", 
-    "title": "Comparison 2"
+    "slug": "casengo/vs/freshdesk", 
+    "title": "Casengo vs Freshdesk"
   }
 },
 {
@@ -29,12 +28,23 @@
   "model": "comparisons.comparison", 
   "fields": {
     "applications": [
-      9, 
-      11, 
-      12
+      5, 
+      8
     ], 
-    "slug": "comparison-3", 
-    "title": "Comparison 3"
+    "slug": "paypal/vs/authorizenet", 
+    "title": "PayPal vs Authorize.net"
+  }
+},
+{
+  "pk": 4, 
+  "model": "comparisons.comparison", 
+  "fields": {
+    "applications": [
+      13, 
+      16
+    ], 
+    "slug": "dropbox/vs/sugarsync", 
+    "title": "Dropbox vs SugarSync"
   }
 }
 ]

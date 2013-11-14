@@ -1,4 +1,5 @@
 from django.http import Http404
+from django.db.models import Count
 from django.shortcuts import get_object_or_404, redirect
 
 from .models import Comparison
@@ -6,14 +7,18 @@ from utils.views import render_to
 
 
 @render_to('comparitions/detail.html')
-def detail(request, comparison_slug=None):
-    print comparison_slug
+def detail(request, slug=None):
     comparisons = Comparison.objects.all()
-    if comparison_slug:
-        comparison = get_object_or_404(Comparison, slug=comparison_slug)
+    # if full_slug:
+    #     app_slugs = full_slug.split('/vs/')
+    #     qs = comparisons.annotate(total=Count('applications'))
+    #     for slug in app_slugs:
+    #         qs = qs.filter(applications__slug=slug)
+    #     comparison = get_object_or_404(qs, total=len(app_slugs))
+    if slug:
+        comparison = get_object_or_404(Comparison, slug=slug)
     else:
         try:
-            print comparisons[0].get_absolute_url()
             return redirect(comparisons[0])
         except IndexError:
             raise Http404
