@@ -6,7 +6,7 @@ from apps.models import Application
 class Comparison(models.Model):
     title = models.CharField(max_length=200, editable=False)
     slug = models.CharField(max_length=200, unique=True, editable=False)
-    applications = models.ManyToManyField(Application)
+    applications = models.ManyToManyField(Application, limit_choices_to={'enabled': True})
 
     def __unicode__(self):
         return self.title
