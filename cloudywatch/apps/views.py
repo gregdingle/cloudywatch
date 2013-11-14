@@ -70,7 +70,7 @@ def find_tool(request):
     if form.is_valid():
         application = form.cleaned_data['application']
         results = {}
-        for word in ('vs', 'compared to', 'or'):
+        for word in ('vs', 'compared to'):
             q = '%s %s' % (application.title.lower(), word)
             r = requests.get('http://suggestqueries.google.com/complete/search?output=toolbar&hl=en&%s'
                              % urllib.quote_plus('q=%s' % q, safe='='))
