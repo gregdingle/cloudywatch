@@ -16,14 +16,6 @@ class ComparisonForm(forms.ModelForm):
         if Comparison.objects.filter(slug=slug).exclude(pk=self.instance.pk).exists():
             raise forms.ValidationError('Comparison with these apps already exists.')
 
-        # qs = Comparison.objects.annotate(total=Count('applications'))
-        # for app in apps:
-        #     qs = qs.filter(applications=app)
-        # qs = qs.filter(total=len(apps))
-
-        # if qs and self.instance not in qs:
-        #     raise forms.ValidationError('Comparison with these apps already exists.')
-
         self.instance.apps = apps
         return apps
 

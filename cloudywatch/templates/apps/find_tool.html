@@ -27,7 +27,7 @@ Find tool
 {% block content %}
 <div id="content-main">
     <form>{% block form_top %}{% endblock %}
-        <p>The results marked in green indicate that the application of the same name already exists in the database.</p>
+        <p>The results marked in green indicate that the application of the same name already exists in the database. Crossed out results mean that the application is exists in DB but disabled. You can create the comparison only if both application are already created and enabled.</p>
         <fieldset class="module aligned">
             <div class="form-row" style="overflow: visible;">
                 <div class="field-box">
@@ -47,15 +47,26 @@ Find tool
     <table>
         <caption>{{ word }}</caption>
         <tbody>
-        {% for name, exists in app_list %}
+        {% for title, app, comparison in app_list %}
             <tr>
-                <td class="{{ exists|yesno:'exists,' }}">{{ name }}</td>
+                <td class="{{ app|yesno:'exists,' }}{% if not app.enabled %} disabled{% endif %}">{{ title }}</td>
                 <td class="button-container">
                 {% with button_title="Create app" %}
-                {% if not exists %}
-                    <a href="{% url 'admin:apps_application_add' %}?category={{ category.pk }}&title={{ name|capfirst }}&slug={{ name|slugify }}" target="_blank"><input type="button" value="{{ button_title }}" /></a></td>
+                {% if not app %}
+                    <a href="{% url 'admin:apps_application_add' %}?category={{ application.category_id }}&title={{ title|capfirst }}&slug={{ title|slugify }}" target="_blank"><input type="button" value="{{ button_title }}" /></a></td>
                 {% else %}
                     <input type="button" disabled="disabled" value="{{ button_title }}" />
+                {% endif %}
+                {% endwith %}
+                </td>
+                <td class="button-container">
+                {% with button_title="Create comparison" %}
+                {% if app and app.enabled and application.enabled and not comparison %}
+                    <a href="{% url 'admin:comparisons_comparison_add' %}?applications={{ application.pk }},{{ app.pk }}" target="_blank"><input type="button" value="{{ button_title }}" /></a></td>
+                {% elif not comparison %}
+                    <input type="button" disabled="disabled" value="{{ button_title }}" />
+                {% else %}
+                    <a href="{{ comparison.get_absolute_url }}">Comparioson exists</a>
                 {% endif %}
                 {% endwith %}
                 </td>
@@ -69,6 +80,5 @@ Find tool
     </table>
     {% endfor %}
     {% endif %}
-
 </div>
 {% endblock %}

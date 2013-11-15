@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 
 from apps.models import Application
 
@@ -19,7 +20,7 @@ class Comparison(models.Model):
 
     @classmethod
     def generate_slug(cls, applications):
-        parts = [app.slug for app in applications]
+        parts = [slugify(app.title) for app in applications]
         return '/vs/'.join(parts)
 
     @models.permalink

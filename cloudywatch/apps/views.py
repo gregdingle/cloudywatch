@@ -12,6 +12,7 @@ from django.shortcuts import get_object_or_404
 from utils.views import render_to
 from .forms import FindToolForm
 from .models import Category, Application
+from comparisons.models import Comparison
 
 
 @render_to('apps/index.html')
@@ -80,10 +81,17 @@ def find_tool(request):
             for s in suggestions:
                 if s != q:
                     title = s.rpartition(q)[2].strip()
-                    exists = Application.objects.filter(title__iexact=title).exists()
-                    app_list.append((title, exists))
+                    comparison = None
+                    try:
+                        app = Application.objects.get(title__iexact=title)
+                        comparison = Comparison.objects.get(slug=Comparison.generate_slug([application, app]))
+                    except Application.DoesNotExist:
+                        app = None
+                    except Comparison.DoesNotExist:
+                        pass
+                    app_list.append((title, app, comparison))
             results[word] = app_list
 
-        return {'form': form, 'results': results, 'category': application.category}
+        return {'form': form, 'results': results, 'application': application}
 
     return {'form': form}

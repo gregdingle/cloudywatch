@@ -1,11 +1,14 @@
 .find-tool table {
-    min-width: 308px;
+    min-width: 33%;
 }
 .find-tool table td {
     vertical-align: middle;
 }
 .find-tool table td.exists {
     color: green;
+}
+.find-tool table td.exists.disabled {
+    text-decoration: line-through;
 }
 .find-tool table caption {
     text-align: left;
@@ -14,10 +17,14 @@
 .find-tool td.button-container {
     width: 1px;
     white-space: nowrap;
+    text-align: center;
 }
 .find-tool td input {
     margin: 0;
 }
 .find-tool td a input {
     cursor: pointer;
+}
+.find-tool input.exists {
+    color: green;
 }
