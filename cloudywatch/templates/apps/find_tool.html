@@ -29,25 +29,31 @@ Find tool
     <form>{% block form_top %}{% endblock %}
         <p>The results marked in green indicate that the application of the same name already exists in the database. Crossed out results mean that the application is exists in DB but disabled. You can create the comparison only if both application are already created and enabled.</p>
         <fieldset class="module aligned">
-            <div class="form-row" style="overflow: visible;">
-                <div class="field-box">
-                    <label for="{{ form.application.id_for_label }}" class="required">{% trans 'Application' %}:</label>
+            <div class="form-row">
+                <div>
+                    <label for="{{ form.application.id_for_label }}" class="required">{{ form.application.label }}:</label>
                     {{ form.application }}
                 </div>
-                <div class="field-box">
-                    <input type="submit" value="Search">
+            </div>
+            <div class="form-row">
+                <div>
+                    {{ form.google_search }}
+                    <label class="vCheckboxLabel" for="{{ form.google_search.id_for_label }}">{{ form.google_search.label }}</label>
                 </div>
-                <div class="clear"></div>
             </div>
         </fieldset>
+
+        <div class="submit-row">
+            <input type="submit" value="Search" class="default">
+        </div>
     </form>
 
     {% if results %}
-    {% for word, app_list in results.items %}
+    {% for word, results_tuple in results.items %}
     <table>
         <caption>{{ word }}</caption>
         <tbody>
-        {% for title, app, comparison in app_list %}
+        {% for title, app, comparison in results_tuple.0 %}
             <tr>
                 <td class="{{ app|yesno:'exists,' }}{% if not app.enabled %} disabled{% endif %}">{{ title }}</td>
                 <td class="button-container">
@@ -73,11 +79,37 @@ Find tool
             </tr>
         {% empty %}
             <tr>
-                <td clospan="2">No results</td>
+                <td>No results</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
+
+    {% with google_search=results_tuple.1 %}
+    {% if google_search %}
+        <div class="google-search-results">
+        <strong>Google search results:</strong><br /><br />
+        {% for r in google_search.responseData.results %}
+            <a href="{{ r.url }}">{{ r.titleNoFormatting }}</a><br />
+        {% empty %}
+            {% if google_search.responseStatus == 200 %}
+                No google search results.
+            {% elif google_search.responseStatus == 403 %}
+                It seems like limit the frequency of requests reached. You should wait couple of minutes and try again.
+            {% else %}
+                Something went wrong.
+            {% endif %}
+
+            {% if google_search.responseStatus != 200 %}
+                <br /><br /><i>Server response details:</i><br />
+                {{ google_search.responseDetails }}
+            {% endif %}
+        {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+
+    <div class="clear"></div>
     {% endfor %}
     {% endif %}
 </div>

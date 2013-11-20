@@ -90,7 +90,15 @@ def find_tool(request):
                     except Comparison.DoesNotExist:
                         pass
                     app_list.append((title, app, comparison))
-            results[word] = app_list
+
+            if form.cleaned_data['google_search']:
+                r = requests.get('https://ajax.googleapis.com/ajax/services/search/web?v=1.0&hl=en&rsz=8&%s'
+                                 % urllib.quote_plus('q=%s' % q, safe='='))
+                google_search_results = json.loads(r.text)
+            else:
+                google_search_results = None
+
+            results[word] = (app_list, google_search_results)
 
         return {'form': form, 'results': results, 'application': application}
 

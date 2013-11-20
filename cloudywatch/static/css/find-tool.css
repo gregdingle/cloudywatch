@@ -1,5 +1,7 @@
 .find-tool table {
+    margin-top: 10px;
     min-width: 33%;
+    float: left;
 }
 .find-tool table td {
     vertical-align: middle;
@@ -27,4 +29,11 @@
 }
 .find-tool input.exists {
     color: green;
+}
+.find-tool .google-search-results {
+    float: left;
+    margin-top: 28px;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
 }
